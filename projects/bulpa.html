@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ricky Shin</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Personal Website for Ricky Shin, Computer Science Student at Columbia University and U.S. Army Veteran">
+    <meta name="keywords" content="personal website">
+    <meta name="author" content="Ricky Shin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon/favicon-16x16.png">
+    <link rel="stylesheet" type="text/css" href="/global.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+</head>
+
+<body>
+    <h1>Ricky Shin</h1>
+    <nav style="text-align: center;">
+        <a href="/index.html">Home</a>
+        <a href="/shin_resume.pdf">Resume</a>
+        <a href="mailto:hi@rickyshin.com">Contact</a>
+    </nav>
+    <h2>Baruch Underground Listing of Professor Ability</h2>
+    <a href="#img1"><img src="/imgs/bulpa_home.png" class="thumbnail" alt="Screenshot of BULPA homepage"></a>
+    <a href="#_" class="lightbox" id="img1"><img src="/imgs/bulpa_home.png"/></a>
+    <figcaption style="font-style: italic; font-size: x-small; text-align: center;">Click to enlarge</figcaption>
+    <p style="text-align: center;"><a href="https://github.com/ricky-shin/bulpa" target="_blank">GitHub Repository</a></p>
+    <p>A school-specific professor review site written in PHP. Not affiliated with the City University of New York or Baruch College.</p>
+    <p><u>The Problem</u>: During my short time at Baruch College, many students relied on word of mouth when picking and choosing classes. Understandably, students wanted
+    the best professor for their classes. Although sites like <a href="https://www.ratemyprofessors.com/" target="_blank">RateMyProfessor</a> exist, the reviews for Baruch College
+    professors were either outdated or nonexistent - it simply could not keep up with the influx of new adjunct professors that taught at Baruch College, a prevalent problem throughout the CUNY system.</p>
+    <p><u>The Solution</u>: A Baruch College specific professor review website. The inspiration to create a school specific professor review website came from <a href="http://www.culpa.info/" target="_blank">CULPA</a>, a professor review website specific for Columbia University that's been around since 1997.</p>
+    <h4>Challenges</h4>
+    <ol>
+        <li>Reducing/eliminating spam submissions
+            <ul>
+                <li>Minimum length in submission box <a href="https://github.com/ricky-shin/bulpa/blob/a71537b5c19a3c6d347acd246f68eaf84c3cf4f9/write-review.php#L43" target="_blank">[see code]</a></li>
+                <li>Capturing users IP address <a href="https://github.com/ricky-shin/bulpa/blob/a71537b5c19a3c6d347acd246f68eaf84c3cf4f9/write-review.php#L45" target="_blank">[see code]</a>
+                <ul><li>Because I was collecting a review submitters IP address, I disclosed this in the Privacy Policy</li></ul></li>
+                <li>All reviews are assigned a '0' value in 'isApproved' <a href="https://github.com/ricky-shin/bulpa/blob/a71537b5c19a3c6d347acd246f68eaf84c3cf4f9/submit-review.php#L15" target="_blank">[see code]</a>
+                    <ul><li>This meant all user submitted reviews were manually reviewed. To make this easier on myself, I created a moderator page that queried the database to list all reviews with the value '0' (false) in 'isApproved' <a href="https://github.com/ricky-shin/bulpa/blob/master/mod.php" target="_blank">[see code]</a></li></ul></li>
+                <li>Implementing Google reCaptcha</li>
+            </ul>
+        </li>
+        <li>Searching for Reviews & Courses
+            <ul><li>As all data was cleansed before being published, I used the 'LIKE' MySQL operator to query reviews <a href="https://github.com/ricky-shin/bulpa/blob/a71537b5c19a3c6d347acd246f68eaf84c3cf4f9/professor.php#L19" target="_blank">[see code]</a>
+            <ul><li>In hindsight, I recognize that this was not an efficient way to search reviews - an influx of users may very well have crashed the site</li></ul></li></ul>
+        </li>
+        <li>Timestamping Reviews
+            <ul><li>To make the process of submitting a review more streamlined, I opted to internally fetch the timestamp of the newly created row instead of asking what the day and time is from the user
+                <ul><li>When querying the database for the timestamp, I would simply convert the unix timestamp using the <a href="https://www.php.net/manual/en/function.date.php" target="_blank">date()</a> function <a href="https://github.com/ricky-shin/bulpa/blob/a71537b5c19a3c6d347acd246f68eaf84c3cf4f9/professor.php#L27" target="_blank">[see code]</a></li></ul>
+            </li></ul>
+        </li>
+        <li>Requiring the same code in every page</li>
+            <ul><li>I wanted every page to look the same and follow the same design principles - but if I wanted to change one thing, I needed to change it in every single file.
+                <ul><li>Although rudimentary, I decided to use the <a href="https://www.php.net/manual/en/function.include.php" target="_blank">include</a> statement throughout my website <a href="https://github.com/ricky-shin/bulpa/blob/a71537b5c19a3c6d347acd246f68eaf84c3cf4f9/submitted.php#L3" target="_blank">[see code]</a>
+                <ul><li>In hindsight, using a template engine like <a href="https://twig.symfony.com/" target="_blank">Twig</a> may have been a better idea</li></ul></li></ul>
+            </li></ul>
+        <li>Sharing Specific Reviews (Permalinks)</li>
+        <ul><li>Because every single review had a unique identifier, I could query a specific review <ul><li>e.g. /review.php?id=5 would fetch the review with 'id' 5</li></ul> </li></ul>
+    </ol>
+    <h4>Database Schema</h4>
+    <ul>
+        <li>reviews
+            <ul>
+                <li>id - Unique identifier for each review</li>
+                <li>fname - First name of professor</li>
+                <li>lname - Last name of professor</li>
+                <li>course - The course code (e.g. BPL 5100)</li>
+                <li>department - Department the course falls under</li>
+                <li>review - User submitted review</li>
+                <li>timestamp - Timestamp when the review was submitted</li>
+                <li>isApproved - Boolean data type</li>
+                <li>submit_ip - Stores IP address of the review submitter</li>
+            </ul>
+        </li>
+    </ul>
+    <h4>Statistics</h4>
+    <a href="#img2"><img src="/imgs/bulpa-analytics.png" class="thumbnail" alt="Screenshot of BULPA Google Analytics"></a>
+    <a href="#_" class="lightbox" id="img2"><img src="/imgs/bulpa-analytics.png"/></a>
+    <figcaption style="font-style: italic; font-size: x-small; text-align: center;">Click to enlarge</figcaption>
+    <ul>
+        <li>942 Users Visited (85% from NY)</li>
+        <li>9,511 Pages Viewed</li>
+        <li>200+ Professors & Courses Anonymously Reviewed</li>
+    </ul>
+    <a href="#img3"><img src="/imgs/bulpa-analytics-flow.png" class="thumbnail" alt="Screenshot of Google Analytics User Behaviors"></a>
+    <a href="#_" class="lightbox" id="img3"><img src="/imgs/bulpa-analytics-flow.png"/></a>
+    <figcaption style="font-style: italic; font-size: x-small; text-align: center;">Click to enlarge</figcaption>
+    <ul>
+        <li>Most users prefered to search and read reviews rather than submit reviews (as expected)</li>
+    </ul>
+    <footer>
+        <div style="font-style: italic; font-size: x-small;">
+            Updated: May 26th, 2020
+        </div>
+    </footer>
+</body>
+
+</html>

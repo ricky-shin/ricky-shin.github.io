@@ -1,332 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <title>Ricky Shin</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="css/main.bundle.css">
-  <link rel="stylesheet" href="css/personal.css">
-  <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153653921-1"></script>
-  <script>
-  	window.dataLayer = window.dataLayer || [];
-  	function gtag(){dataLayer.push(arguments);}
-  	gtag('js', new Date());
-
-  	gtag('config', 'UA-153653921-1');
-  </script>
-
+    <title>Ricky Shin</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Personal Website for Ricky Shin, Computer Science Student at Columbia University and U.S. Army Veteran">
+    <meta name="keywords" content="personal website">
+    <meta name="author" content="Ricky Shin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon/favicon-16x16.png">
+    <link rel="stylesheet" type="text/css" href="/global.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
 </head>
 
 <body>
-<!-- Announcement Banner -->  
-<!-- 
-<div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-  Currently Looking for Internship Opportunities for Summer or Fall 2020! Please e-mail me at <a href="mailto:hi@rickyshin.com" class="has-text-white" style="text-decoration: underline;">hi@rickyshin.com</a>. - 4/1/2020
-</div>
--->
-<!-- Heading -->  
-  <section class="hero is-primary">
-    <div class="hero-body">
-      <div class="container">
-        <div class="level">
-          <div class="level-item has-text-centered">
-            <figure class="image is-128x128">
-              <img class="is-rounded" src="img/me-big.jpg">
-            </figure>
-          </div>
-        </div>
-        <div class="columns has-text-centered">
-          <div class="column">
-            <h1 class="title is-1">
-              Ricky Shin
-            </h1>
-            <h2 class="subtitle">
-              Computer Science Student
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Education -->  
-    <section class="section">
-    <div class="container">
-      <h1 class="title">Education</h1>
-      <hr />
-      <div class="card">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-48x48">
-                <img src="img/columbia.png" alt="Columbia University Logo">
-              </figure>
-            </div>
-            <div class="media-content">
-              <p class="title is-4">Columbia University</p>
-              <p class="subtitle is-6">Bachelor of Arts, Computer Science (Expected Fall 2022)</p>
-            </div>
-          </div>
-          <div class="content">
-            <ul>
-              <li>Relevant Coursework:</li>
-              <ul>
-                <li>COMS W1004 - Introduction to Computer Science and Programming in Java</li>
-                <li>COMS W3134 - Data Structures in Java (Fall 2020)</li>
-                <li>COMS W3203 - Discrete Mathematics (Fall 2020)</li>
-		            <li>COMS W4111 - Introduction to Databases</li>
-              </ul>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <h1>Ricky Shin</h1>
+    <nav style="text-align: center;">
+        <a href="/index.html">Home</a>
+        <a href="/shin_resume.pdf">Resume</a>
+        <a href="mailto:hi@rickyshin.com">Contact</a>
+    </nav>
+    <h4>About Me</h4>
+    <ul>
+        <li>Third-year Computer Science student at <a href="https://www.columbia.edu/" target="_blank">Columbia
+                University</a></li>
+        <!-- <li>Currently volunteering with the <a href="https://thefoodpantry.studentgroups.columbia.edu/"> Food Pantry at Columbia</a></li> -->
+        <li>Previously interned at <a href="https://foursquare.com/" target="_blank">Foursquare</a> (Summer 2019)</li>
+        <li>U.S. Army Veteran (2013 ~ 2016)</li>
 
-    </div>
-  </section>
-  <!-- Relevant Experience -->  
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Relevant Experience</h1>
-      <hr />
-      <div class="card">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-48x48">
-                <img src="img/foursquare.png" alt="Foursquare Logo">
-              </figure>
-            </div>
-            <div class="media-content">
-              <p class="title is-4">Foursquare</p>
-              <p class="subtitle is-6">Data Support Intern, May 2019 - September 2019</p>
-            </div>
-          </div>
-          <div class="content">
-            <ul>
-            			<li>Working under the Engineering department, primary duties included data cleansing data used in consumer facing applications and internal analyses.</li>
-				          <li>Working with the Attribution team, conducted ad hoc analyses for partner companies to measure potential foot traffic using Foursquare's Attribution Machine Learning model.</li>
-				          <li>QA tested two consumer facing applications: Foursquare <a href="https://foursquare.com/download" class="has-text-info">City Guide</a> and <a href="https://www.swarmapp.com/" class="has-text-info">Swarm</a>, most notably in preparation for iOS 13.</li>
-            </ul>
-          </div>
+    </ul>
+
+    <h4>Personal Projects</h4>
+    <ul>
+        <li><a href="/index.html">RickyShin.com</a>, fun fact - the color scheme changes depending on your system preferences <a href="/projects/this.html">[read more]</a></li>
+        <li><a href="https://www.covidinnyc.com/" target="_blank">COVID-19 in NYC: Charted</a>, a website that
+            automatically fetches and charts data related to the COVID-19 pandemic in NYC <a href="/projects/covid-in-nyc.html">[read more]</a>
+        </li>
+        <li><a href="https://github.com/ricky-shin/bulpa" target="_blank">bulpa (Baruch Undeground Listing of
+                Professor Ability)</a>, a professor review website specific to Baruch College, City University of New
+            York <a href="/projects/bulpa.html">[read more]</a> </li>
+        <li><a href="https://apps.apple.com/us/app/escape-area-51-raid-survival/id1475180053/" target="_blank">Ecape
+                Area 51: Raid Survival</a>, a side-scrolling game currently live on the iOS App Store, with hundreds of
+            downloads worldwide <a href="/projects/escape-area-51.html">[read more]</a></li>
+    </ul>
+    <footer>
+        <div style="font-style: italic; font-size: x-small;">
+            Updated: May 26th, 2020
         </div>
-      </div>
-      <div class="card card-gap">
-        <div class="card-content">
-          <div class="media">
-            <div class="media-left">
-              <figure class="image is-48x48">
-                <img src="img/usarmy.png" alt="US Army Logo">
-              </figure>
-            </div>
-            <div class="media-content">
-              <p class="title is-4">United States Army</p>
-              <p class="subtitle is-6">Communications Specialist, 2013 - 2016</p>
-            </div>
-          </div>
-          <div class="content">
-            <div style="text-align:center">
-              <div class="tooltip"><img src="img/ribbons/arcom.jpg" alt="Army Commendation Medal"><span class="tooltiptext">Army Commendation Medal</span></div>
-              <div class="tooltip"><img src="img/ribbons/gcm.jpg" alt="Good Conduct Medal"><span class="tooltiptext">Army Good Conduct Medal</span></div>
-              <br />
-              <div class="tooltip"><img src="img/ribbons/ndsm.jpg" alt="National Defense Service Medal"><span class="tooltiptext">National Defense Service Medal</span></div>
-              <div class="tooltip"><img src="img/ribbons/gwot.jpg" alt="Global War on Terrorism Service Medal"><span class="tooltiptext">Global War on Terrorism Service Medal</span></div>
-              <div class="tooltip"><img src="img/ribbons/asr.jpg" alt="Army Service Ribbon"><span class="tooltiptext">Army Service Ribbon</span></div>
-              <br />
-              <div style="font-style: italic; font-size: x-small;">(Hover for Details)</div>
-            </div>
-            <ul>
-            	<li>Achieved the rank of Specialist (E-4) before being discharged from active duty.</li>
-				      <li>Managed a team of three junior communication operators, providing guidance and mentorship by evaluating performance on a monthly basis.</li>
-				      <li>Operated and maintained military-grade radios transmitting classified information, in support of <a href="https://en.wikipedia.org/wiki/Operation_Inherent_Resolve" class="has-text-info">Operation Inherent Resolve</a>.</li>
-		    		  <li>As a certified <a href="https://en.wikipedia.org/wiki/Combat_lifesaver_course" class="has-text-info">Combat Lifesaver</a>, performed duties as an intermediary medic responsible for administering advanced life support to 120 troops within the company.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- Personal Projects --> 
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Personal Projects</h1>
-      <hr />
-      <div class="tile is-ancestor">
-        <div class="tile is-vertical is-12">
-          <div class="tile">
-            <div class="tile is-parent is-vertical">
-              <article class="tile is-child notification">
-                <p class="title">JoyToys</p>
-                <figure class="image is-4by3">
-                  <img class="modal-trigger" data-target="project-1-modal" src="img/joytoys_small.png">
-                </figure>
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification">
-                <p class="title">BULPA</p>
-                <figure class="image is-4by3">
-                  <img class="modal-trigger" data-target="project-2-modal" src="img/bulpa_small.png">
-                </figure>
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification">
-                <p class="title">Escape Area 51</p>
-                <figure class="image is-4by3">
-                  <img class="modal-trigger" data-target="project-3-modal" src="img/escape-area-51_small.png">
-                </figure>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
-  <!-- Keep in Touch --> 
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Keep in Touch</h1>
-      <hr />
-      <nav class="level">
-          <div class="level-item has-text-centered">
-            <div>
-              <a href="https://github.com/ricky-shin" class="icon is-large, has-text-info">
-                <i class="fab fa-2x fa-github"></i>
-              </a>
-              <p class="heading"><a href="https://github.com/ricky-shin" class="has-text-info">/ricky-shin</a></p>
-            </div>
-          </div>           
-            <div class="level-item has-text-centered">
-              <div>
-                  <a href="https://www.linkedin.com/in/ricky-shin" class="icon is-large, has-text-info">
-                    <i class="fab fa-2x fa-linkedin-in"></i>
-                  </a>
-                  <p class="heading"><a href="https://www.linkedin.com/in/ricky-shin" class="has-text-info">/ricky-shin</a></p>
-              </div>
-            </div>
-          <div class="level-item has-text-centered">
-              <div>
-                  <a href="mailto:hi@rickyshin.com" class="icon is-large, has-text-info">
-                    <i class="fas fa-2x fa-envelope"></i>
-                  </a>
-                  <p class="heading"><a href="mailto:hi@rickyshin.com" class="has-text-info">hi@rickyshin.com</a></p>
-              </div>
-            </div>
-          <div class="level-item has-text-centered">
-              <div>
-                  <a href="/shin_resume.pdf" class="icon is-large, has-text-info" >
-                    <i class="fas fa-2x fa-file-pdf"></i>
-                  </a>
-                  <p class="heading"><a href="/shin_resume.pdf" class="has-text-info">résumé</a></p>
-              </div>
-            </div>
-        </nav>
-    </div>
-  </section>
-
-  <!-- Modals -->
-  <div id="project-1-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">JoyToys</p>
-        <button class="delete" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <p class="image is-3by2">
-          <img src="img/joytoys_small.png" alt="">
-        </p>
-
-        <div class="content">
-        	<p style="text-align: center;"><a href="https://github.com/stanleylalanne/joytoys">Github</a>
-            <br />
-            <span class="tag">PHP</span> <span class="tag">MySQL</span> <span class="tag">Bootstrap</span>
-        	</p>
-        	<ul>
-        		<li>A web application created to connect underprivileged children with generous anonymous donors, which an emphasis on gift giving. Wishlists are scraped and parsed using a custom Amazon API.</li>
-				<li>Built in 2.5 days as a submission for the 2019 City University of New York Hackathon.</li>
-        	</ul>
-        </div>
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success">Close</button>
-      </footer>
-    </div>
-  </div>
-
-  <div id="project-2-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Baruch Underground Listing of Professor Ability</p>
-        <button class="delete" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <p class="image is-3by2">
-          <img src="img/bulpa_small.png" alt="">
-        </p>
-
-        <div class="content">
-          <p style="text-align: center;">
-            <a href="https://github.com/ricky-shin/bulpa">Github</a>
-            <br />
-            <span class="tag">PHP</span> <span class="tag">MySQL</span> <span class="tag">Bootstrap</span>
-        	</p>
-        	<ul>
-        		<li>A web application that allows users to anonymously submit reviews for courses and professors at Baruch College. These reviews are then pushed and stored on a MySQL database.</li>
-			      <li>Reviews are displayed by querying the MySQL database, showing relevant content to users.</li>
-			      <li>Over 9,500 pages viewed, with 940+ users submitting 200+ anonymous reviews within 5 months.</li>
-
-        	</ul>
-        </div>
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success">Close</button>
-      </footer>
-    </div>
-  </div>
-
-  <div id="project-3-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Escape Area 51: Raid Survival</p>
-        <button class="delete" aria-label="close"></button>
-      </header>
-      <section class="modal-card-body">
-        <p class="image is-3by2">
-          <img src="img/escape-area-51_small.png" alt="">
-        </p>
-
-        <div class="content">
-        		<p style="text-align: center;">
-              <a href="https://apps.apple.com/us/app/escape-area-51-raid-survival/id1475180053">App Store Link</a>
-              <br /><span class="tag">Swift</span>
-        	  </p>
-        	<ul>
-        		<li>Features randomly generated barriers that players must pass through to earn points. The game is over upon colliding with a barrier and the total score earned by the player is uploaded to a leaderboard. Players can retrieve this leaderboard to see where they rank amongst other players.</li>
-				    <li>Passed Apple’s stringent review guidelines and published on the iOS App Store.</li>
-        	</ul>
-        </div>
-      </section>
-      <footer class="modal-card-foot">
-        <button class="button is-success">Close</button>
-      </footer>
-    </div>
-  </div>
-  <!-- Footer --> 
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>         
-        <a href="#" class="has-text-info">&copy; Ricky Shin</a>
-        <div style="font-style: italic; font-size: x-small;">Last Updated: May 19th, 2020</div>
-      </p>
-    </div>
-  </footer>
-
-  <script src="js/bundle.js"></script>
+    </footer>
 </body>
 
 </html>
