@@ -4,6 +4,6 @@ var animation = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: 'imgs/404/astronaut.json'
+    path: '/imgs/404/astronaut.json'
         
     })
